@@ -11,7 +11,7 @@ const contactSlice = createSlice({
   },
 
   reducers: {
-    addContact: {
+     addContact: {
       reducer({contacts}, action) {
         contacts.push(action.payload);
       },
@@ -29,11 +29,12 @@ const contactSlice = createSlice({
       const index = contacts.findIndex(contact => contact.id === action.payload);
       contacts.splice(index, 1);
     },
-    filterContact(state, action) {
+     filterContact(state, action) {
       state.filter = action.payload;
     }
   },
 });
+
 
 const persistConfig = {
   key: 'contacts',

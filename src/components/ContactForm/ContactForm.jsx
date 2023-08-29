@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from '../redux/contactsSlice';
 import { IoMdPersonAdd } from 'react-icons/io';
 import { BsFillTelephoneFill, BsPersonFill } from 'react-icons/bs';
 import {
@@ -11,7 +11,6 @@ import {
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -22,19 +21,14 @@ export const ContactForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-          <FormField htmlFor="name">
-                <BsPersonFill />
+      <FormField htmlFor="name">
+        <BsPersonFill />
         Name
-        <FieldFormik
-          type="text"
-          name="name"
-          placeholder="Name"
-          required
-        />
+        <FieldFormik type="text" name="name" placeholder="Name" required />
       </FormField>
 
-          <FormField htmlFor="number">
-                  <BsFillTelephoneFill />
+      <FormField htmlFor="number">
+        <BsFillTelephoneFill />
         Number
         <FieldFormik
           type="tel"
@@ -44,8 +38,8 @@ export const ContactForm = () => {
         />
       </FormField>
       <StyledButton type="submit">
-              <IoMdPersonAdd size="16" />
-              Add contact
+        <IoMdPersonAdd size="16" />
+        Add contact
       </StyledButton>
     </Form>
   );
