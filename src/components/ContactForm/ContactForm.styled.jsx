@@ -13,20 +13,34 @@ export const Form = styled.form`
 
 export const FormField = styled.label`
   display: flex;
-  flex-direction: column;
+ flex-direction: row;
+    align-items: center;
+    justify-content: center;
   font-size: 20px;
   max-width: 100%;
   width: 500px;
   text-shadow: rgb(255, 255, 255) 0px 1px 1px;
 `;
 
+export const LabelWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-left: 8px;
+`;
+
+export const LabelSpan = styled.span`
+  padding-left: 5px;
+`;
+
 export const FieldFormik = styled.input`
   padding: 8px 16px;
-  max-width: 100%;
+width: 300px;
   border: 0px;
   outline: 0px;
   border-radius: 8px;
-  margin-top:10px;
+
 
   color: rgb(6, 58, 54);
   background-color: #EDE4F7;

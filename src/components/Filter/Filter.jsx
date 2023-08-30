@@ -3,10 +3,10 @@ import { filterContact } from '../redux/contactsSlice';
 import { Input, LabelDescr } from './Filter.styled';
 
 const Filter = () => {
-  const dispatch = useDispatch();
-  const hendleFilter = e => {
-    dispatch(filterContact(e.currentTarget.value));
-  };
+   const dispatch = useDispatch()
+  const hendleFilter = (e) => {
+    dispatch(filterContact(e.currentTarget.value))
+  }
 
   return (
     <LabelDescr htmlFor="filter">

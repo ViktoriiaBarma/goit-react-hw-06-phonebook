@@ -1,5 +1,5 @@
 import { deleteContact } from '../redux/contactsSlice';
-import { Btn } from './ContactList.styled';
+import { Btn } from '../ContactList/ContactList.styled';
 import { useDispatch } from 'react-redux';
 
 
@@ -16,5 +16,9 @@ const Contact = ({ contact }) => {
   );
 };
 export default Contact;
+
+
+
+
 
 

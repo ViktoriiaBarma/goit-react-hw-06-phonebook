@@ -7,6 +7,8 @@ import {
   FormField,
   FieldFormik,
   StyledButton,
+  LabelWrapper,
+  LabelSpan,
 } from './ContactForm.styled';
 
 export const ContactForm = () => {
@@ -21,22 +23,30 @@ export const ContactForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <FormField htmlFor="name">
-        <BsPersonFill />
-        Name
-        <FieldFormik type="text" name="name" placeholder="Name" required />
-      </FormField>
+      <LabelWrapper>
+        <FormField htmlFor="name">
+          <BsPersonFill />
+          <LabelSpan>
+            Name
+            </LabelSpan>
+        </FormField>
+      </LabelWrapper>
+      <FieldFormik type="text" name="name" placeholder="Name" required />
 
-      <FormField htmlFor="number">
-        <BsFillTelephoneFill />
-        Number
-        <FieldFormik
-          type="tel"
-          name="number"
-          required
-          placeholder="+38-050-123-45-67"
-        />
-      </FormField>
+      <LabelWrapper>
+        <FormField htmlFor="number">
+          <BsFillTelephoneFill />
+           <LabelSpan>
+            Number
+            </LabelSpan>
+        </FormField>
+      </LabelWrapper>
+      <FieldFormik
+        type="tel"
+        name="number"
+        required
+        placeholder="+38-050-123-45-67"
+      />
       <StyledButton type="submit">
         <IoMdPersonAdd size="16" />
         Add contact

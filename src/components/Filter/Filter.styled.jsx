@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const LabelDescr = styled.label`
 display: flex;
+    align-items: center;
         flex-direction: column;
         gap: 8px;
         color: #000;

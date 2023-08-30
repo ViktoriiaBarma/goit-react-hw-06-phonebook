@@ -1,21 +1,12 @@
 import ContactForm from "./ContactForm/ContactForm";
 import Filter from "./Filter/Filter";
 import ContactList from "./ContactList/ContactList";
+import { Layout } from "./Layout/Layout";
 
 export const App = () => {
 
   return (
-      <>
-      {/* // <div
-      //   style={{
-      //     height: '100vh',
-      //     justifyContent: 'center',
-      //     alignItems: 'center',
-      //     fontSize: 40,
-      //     color: '#010101',
-      //     padding: '20px',
-      //   }}
-      // > */}
+<Layout>
       <h1
           style={{
             fontSize: '20px',
@@ -29,8 +20,7 @@ export const App = () => {
           }}>Contacts</h2>
         <Filter />
         <ContactList />
-      {/* // </div> */}
-  </>
+      </Layout>
     )
   }
 
